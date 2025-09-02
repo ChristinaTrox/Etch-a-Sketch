@@ -17,3 +17,10 @@
     background-color: #eee;
     border: 1px solid #ccc;
 }
+
+.grid-button {
+    border: 1px solid rgb(61, 7, 61);
+    margin: 10px;
+    width: 100px;
+    height: 50px;
+}
