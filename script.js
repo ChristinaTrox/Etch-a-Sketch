@@ -14,3 +14,11 @@ for (let i = 0; i < 256; i++) {
      square.style.backgroundColor = "black";
 }); 
   });  
+
+   const btn = document.createElement("button");
+   btn.textContent = "New Grid";
+   document.body.insertBefore(btn, container);
+   btn.className = "grid-button";
+   
+
+
