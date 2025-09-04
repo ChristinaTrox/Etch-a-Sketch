@@ -11,9 +11,14 @@ for (let i = 0; i < 256; i++) {
      
      squares.forEach(square => {
      square.addEventListener("mouseenter", () => {
-     square.style.backgroundColor = "black";
+   const r = Math.floor(Math.random() * 256);
+   const g = Math.floor(Math.random() * 256);
+   const b = Math.floor(Math.random() * 256);
+   const randomColor = `rgb(${r}, ${g}, ${b})`;
+    square.style.backgroundColor = randomColor;
+   });
 }); 
-  });  
+   
 
    const btn = document.createElement("button");
    btn.textContent = "New Grid";
@@ -41,9 +46,16 @@ for (let i = 0; i < 256; i++) {
     const squares = document.querySelectorAll('.grid-square');
     squares.forEach(square => {
         square.addEventListener("mouseenter", () => {
-           square.style.backgroundColor = "black"; 
+   const r = Math.floor(Math.random() * 256);
+   const g = Math.floor(Math.random() * 256);
+   const b = Math.floor(Math.random() * 256);
+   const randomColor = `rgb(${r}, ${g}, ${b})`;
+    square.style.backgroundColor = randomColor;
+   });
         });
-    });
-   }
+    }
+   
+
+
 
 
