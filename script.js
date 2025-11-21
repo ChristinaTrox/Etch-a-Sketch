@@ -21,11 +21,12 @@ for (let i = 0; i < 256; i++) {
    
 
    const btn = document.createElement("button");
-   btn.textContent = "New Grid";
+   btn.textContent = "Choose your squares";
    document.body.insertBefore(btn, container);
    btn.className = "grid-button";
    btn.addEventListener("click", () => {
    let squaresPerSide = prompt("Enter number of squares per side(max 100:");
+   if (squaresPerSide === null) return;
    squaresPerSide = Number(squaresPerSide);
    if ( squaresPerSide > 100) squaresPerSide = 100;
    createGrid(squaresPerSide);
@@ -55,7 +56,19 @@ for (let i = 0; i < 256; i++) {
         });
     }
    
+const resetBtn = document.createElement("button");
+resetBtn.textContent = "Reset Sketch";
+resetBtn.className = "grid-button";
+document.body.insertBefore(resetBtn, container);
 
+resetBtn.addEventListener("click", () => {
+    container.innerHTML = "";
+    createGrid(16);
+});
 
-
+const btnContainer = document.createElement("div");
+btnContainer.className = "button-container";
+document.body.insertBefore(btnContainer, container);
+btnContainer.appendChild(btn);
+btnContainer.appendChild(resetBtn);
 
